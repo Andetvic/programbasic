@@ -1,12 +1,41 @@
 <!DOCTYPE html>
-<html>
-<head>
-	<meta charset="utf-8" />
-	<title>Piedra papel o tijera</title>
-	<script type="text/javascript" src="js/piedra.js"></script>
-</head>
-<body>
-	<h1>Jan Ken Poh!</h1>
-	
-</body>
+<html lang="es">
+	<head>
+		<meta charset="UTF-8">
+		<title>Piedra, Papel, Tijeras, Lagarto, Spock!!</title>
+		<script type="text/javascript" src="js/piedra.js"></script>
+	</head>
+	<body>
+		<h1 class="text-center">Yan Ken Po!</h1>
+		<h4>Reglas</h4>
+		<ul>
+			<li>Piedra rompe tijeras</li>
+			<li>Tijeras cortan papel</li>
+			<li>Papel cubre piedra</li>
+		</ul>
+		<p>y si sacan lo mismo es empate</p>
+		<!-- <p>"Las tijeras cortan el papel, el papel cubre a la piedra, la piedra aplasta al lagarto, el lagarto envenena a Spock, Spock destroza las tijeras, las tijeras decapitan al lagarto, el lagarto se come el papel, el papel refuta a Spock, Spock vaporiza la piedra, y, como es habitual… la piedra aplasta las tijeras.”</p> -->
+		<div>
+			<img src="images/Piedra.png" alt="">
+			<img src="images/Papel.png" alt="">
+			<img src="images/Tijera.png" alt="">
+			<!-- <img src="images/Lagarto.png" alt="">
+			<img src="images/Spock.png" alt=""> -->
+		</div>
+		<h3>Haz tu elección</h3>
+		<ol>
+			<li>Piedra</li>
+			<li>Tijeras</li>
+			<li>Papel</li>
+			<!-- <li>Lagarto</li>
+			<li>Spock</li> -->
+		</ol>
+		<p>¿Cuás eliges?</p>
+		<input type="text" value="0" id="opcionUsuario">
+		<input type="button" value="Juguemos!" onclick="valor();">
+		<div>
+			<p id="desafio"></p>
+			<p id="resultado"></p>
+		</div>
+	</body>
 </html>
