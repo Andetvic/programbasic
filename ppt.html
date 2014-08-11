@@ -4,6 +4,13 @@
 		<meta charset="UTF-8">
 		<title>Piedra, Papel, Tijeras, Lagarto, Spock!!</title>
 		<script type="text/javascript" src="js/piedra.js"></script>
+		<style>
+			#ul_opcionUsuario li{
+				display: inline;
+				list-style-type: none;
+				padding-right: 20px;
+			}
+		</style>
 	</head>
 	<body>
 		<h1 class="text-center">Yan Ken Po!</h1>
@@ -14,26 +21,13 @@
 			<li>Papel cubre piedra</li>
 		</ul>
 		<p>y si sacan lo mismo es empate</p>
-		<!-- <p>"Las tijeras cortan el papel, el papel cubre a la piedra, la piedra aplasta al lagarto, el lagarto envenena a Spock, Spock destroza las tijeras, las tijeras decapitan al lagarto, el lagarto se come el papel, el papel refuta a Spock, Spock vaporiza la piedra, y, como es habitual… la piedra aplasta las tijeras.”</p> -->
-		<div>
-			<img src="images/Piedra.png" alt="">
-			<img src="images/Papel.png" alt="">
-			<img src="images/Tijera.png" alt="">
-			<!-- <img src="images/Lagarto.png" alt="">
-			<img src="images/Spock.png" alt=""> -->
-		</div>
-		<h3>Haz tu elección</h3>
-		<ol>
-			<li>Piedra</li>
-			<li>Tijeras</li>
-			<li>Papel</li>
-			<!-- <li>Lagarto</li>
-			<li>Spock</li> -->
-		</ol>
-		<p>¿Cuás eliges?</p>
-		<input type="text" value="0" id="opcionUsuario">
-		<input type="button" value="Juguemos!" onclick="valor();">
-		<div>
+		
+		<h3>Haz tu elección. ¿Cuás eliges?</h3>
+		<ul id="ul_opcionUsuario">
+			<li data-opcion-usuario="0" onclick="valor(this);"><img src="images/Piedra.png" alt="" ></li>
+			<li data-opcion-usuario="1" onclick="valor(this);"><img src="images/Tijera.png" alt="" ></li>
+			<li data-opcion-usuario="2" onclick="valor(this);"><img src="images/Papel.png" alt="" ></li>
+		</ul>
 			<p id="desafio"></p>
 			<p id="resultado"></p>
 		</div>
