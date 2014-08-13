@@ -28,10 +28,12 @@ function valor(ctrl){
 		var maquina = opciones[opcionMaquina];
 		
 		//Se crean las avariabls a mostrar en caso de ganar, perder o empatar
-		var ganaste = "<h2 class='ScoreResult'>Ganaste!</h2>"
-		var perdiste = "<h2 class='ScoreResult'>Perdiste!</h2>"
-		var empate = "<h2 class='ScoreResult'>Empate!</h2>"
+		var ganaste = "<h2 class='ScoreResult'>Ganaste!</h2>";
+		var perdiste = "<h2 class='ScoreResult'>Perdiste!</h2>";
+		var empate = "<h2 class='ScoreResult'>Empate!</h2>";
 		
+		var resultado = "";
+
 		//Se crea la condicion "if" en caso que sea un empate
 		if (usuario === maquina){
 			resultado = empate;
