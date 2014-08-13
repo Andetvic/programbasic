@@ -12,7 +12,12 @@ function valor(ctrl){
 	//Aqui muestro la variable en la consola para ve que esta dando como resultado
 	//console.log("Maquina : " + opcionMaquina);
 	//Se obtiene el valor del usuario
-	var opcionUsuario = ctrl.dataset.opcionUsuario;
+	var opcionUsuario = -1;
+	try{
+		opcionUsuario = ctrl.dataset.opcionUsuario;
+	}catch(e){
+		opcionUsuario = ctrl.getAttribute("data-opcion-usuario");
+	}
 	//console.log("Usuario : " + opcionUsuario);
 	//Se condiciona para que el numero intruducido este entre el rango de numeros esperados
 
