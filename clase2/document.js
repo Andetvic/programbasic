@@ -10,11 +10,7 @@ var maxima;
 maxima = Math.max(5,23,4,5,12,24,23,100);
 document.write(maxima);
 
-var pos =navigator.getCurrentPosition( mostrar );
-function mostrar(pos)
-{
-	document.write(pos.coords.latitude + "," + pos.coords.latitude)
-}
+
 buscar Asignacion por valor asignacion por referencia
 */
 
@@ -56,3 +52,9 @@ function inicio()
 	var pikachu = new Pokemon("Pikachu",100,55);
 	nombrePokemon.innerText = pikachu.nombre;
 }
+var pos =navigator.getCurrentPosition( mostrar );
+function mostrar(pos)
+{
+	document.write(pos.coords.latitude + "," + pos.coords.longitude)
+}
+navigator.geolocation.getCurrentPosition( mostrar )
