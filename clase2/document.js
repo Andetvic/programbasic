@@ -52,9 +52,9 @@ function inicio()
 	var pikachu = new Pokemon("Pikachu",100,55);
 	nombrePokemon.innerText = pikachu.nombre;
 }
-var pos =navigator.getCurrentPosition( mostrar );
+
 function mostrar(pos)
 {
-	document.write(pos.coords.latitude + "," + pos.coords.longitude)
+	document.write(pos.coords.latitude + "," + pos.coords.longitude);
 }
-navigator.geolocation.getCurrentPosition( mostrar )
+navigator.geolocation.getCurrentPosition( mostrar );
