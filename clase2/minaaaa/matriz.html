@@ -1,0 +1,128 @@
+<html>
+<head>
+<script languaje="javascript">
+var zonaCreada = [];
+var isGameOver = false;
+var total = 0;
+var seleccionados = 0;
+var maxMinas = 0;
+
+function createMatrix(_size, _maxMinas){
+	var size = _size;
+	total = _size * _size;
+	maxMinas = _maxMinas;
+	if(size > 0){
+		for(var i = 0; i < size; i++){
+			zonaCreada.push(new Array());
+			for(var j = 0; j < size; j++){
+				var valor = getValueShuffle();
+				if ( valor === 1){
+					if (maxMinas > 0){
+						maxMinas--;
+					}else{
+						valor = 0;
+					}
+				}
+				zonaCreada[i].push(valor);
+			}
+		}
+	}
+}
+
+</script>
+<script languaje="javascript">
+	function getValueShuffle(){
+		return getValueShuffleMaster(1,0);
+	}
+	function getValueShuffleMaster(max, min){
+		return Math.floor(Math.random() * (max - min + 1) + min);
+	}
+</script>
+</head>
+<body>
+<div id="result">
+</div>
+<div id="mensaje">
+</div>
+Tama&ntilde;o<input id="size" type="text" size="10" value="3"/><br/>
+<input type="button" value="Mostrar Matriz" onclick="javascript:showMatrix();" />
+<script languaje="javascript">
+	function showMatrix(){
+		// Se inicializan las variables globales
+		zonaCreada = [];
+		isGameOver = false;
+		total = 0;
+		seleccionados = 0;
+		var mensaje = document.getElementById('mensaje');
+		var msg = "";
+		try{
+			mensaje.innerHTML = msg;
+		}catch(e){
+			mensaje.text = msg;
+		}
+
+		var size = 0;
+		try{
+			size = parseInt(document.getElementById("size").value);
+		}catch(e){
+		}
+		createMatrix(size, 2);
+
+		//pintando la matriz
+		var html = "<table>";
+		for(var i = 0; i < size; i++){
+			html += "<tr>";
+			for(var j = 0; j < size; j++){
+				html += "<td id='td_" + i + "_" + j + "' onclick='javascript:showValue(this);'>";
+				html += "?";
+				html += "</td>";
+			}
+			html += "</tr>";
+		}
+		html += "</table>";
+		
+		var result = document.getElementById('result');
+		try{
+			result.innerHTML = html;
+		}catch(e){
+			result.text = html;
+		}
+	}
+	function showValue(ctrl){
+		if(!isGameOver){
+			var part = ctrl.id.split("_");
+			var val_i = parseInt(part[1]);
+			var val_j = parseInt(part[2]);
+			var msg = "Continua tu puedes!";
+
+			var html = "" + zonaCreada[val_i][val_j];
+			try{
+				ctrl.innerHTML = html;
+			}catch(e){
+				ctrl.text = html;
+			}
+			ctrl.onclick = null;
+			if(parseInt(html) === 1){
+				isGameOver = true;
+				msg = "Perdiste!!!!";
+			}else{
+				seleccionados++;
+			}
+
+			if((seleccionados + maxMinas) === total){
+				isGameOver = true;
+				msg = "Ganaste!!!!";
+			}
+
+			var mensaje = document.getElementById('mensaje');
+
+			try{
+				mensaje.innerHTML = msg;
+			}catch(e){
+				mensaje.text = msg;
+			}
+		}
+	}
+</script>
+</body>
+</html>
