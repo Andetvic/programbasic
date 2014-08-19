@@ -1,0 +1,42 @@
+@import url(http://fonts.googleapis.com/css?family=Ubuntu:400,700);
+body
+{
+	background: orange;
+	font-family: 'Ubuntu', sans-serif;
+}
+.pokeBoton
+{
+	background: #A4A4A4;
+	border: none;
+	border-radius: 50%;
+	width: 100px;
+}
+.pokeBoton:hover
+{
+	background: #F3E2A9;
+}
+	.pokeInforme
+{
+	background: white;
+}
+.pokeContenedor
+{
+	margin: auto;
+	width: 80%;
+}
+.pokeInforme-imagen
+{
+	display: inline-block;
+	margin: 0;
+	min-width: 300px;
+	padding: 0;
+	width: 47%;
+}
+.pokeInforme-datos
+{
+	display: inline-block;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+	width: 47%;
+}

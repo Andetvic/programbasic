@@ -50,9 +50,9 @@ pokemonBD.push(createPokemon('033', 'Nidorino', 'Levanta sus grandes orejas para
 pokemonBD.push(createPokemon('034', 'Nidoking', 'Es fácil reconocerlo por tener una dura piel y un gran cuerno lleno de peligrosísimo veneno.', '+3', '+6'));
 pokemonBD.push(createPokemon('035', 'Clefairy', 'Se dice que la felicidad llegará a quien vea a un grupo de Clefairy bailando a la luz de la luna llena.', '+6', '+4'));
 
-
 //Esta funcion mostrara al pokemon
 function showPokemon(i){
+
 	var node = document.getElementById('div_image');
 	var node_datos = document.getElementById('div_datos');
 	pokemonSel = pokemonBD[i];

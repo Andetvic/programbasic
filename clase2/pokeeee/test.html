@@ -3,28 +3,7 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<title>Pokedex</title>
-		<script languaje="javascript" src="js/pokecodigo.js"></script>
-		<style type="text/css">
-			body
-			{
-				background: orange;
-			}
-			.pokeBoton
-			{
-				background: #A4A4A4;
-				border: none;
-				border-radius: 50%;
-				width: 100px;
-			}
-			.pokeBoton:hover
-			{
-				background: #F3E2A9;
-			}
-			.pokeInforme
-			{
-				background: white;
-			}
-		</style>
+		<link rel="stylesheet" type="text/css" href="css/pokestyle.css">
 	</head>
 	<body>
 		<a href="#" onclick="javascript:showPokemon(0);"><img class="pokeBoton" src="images/001.png"/></a>
@@ -59,14 +38,15 @@
 		<a href="#" onclick="javascript:showPokemon(29);"><img class="pokeBoton" src="images/030.png"/></a>
 		<a href="#" onclick="javascript:showPokemon(30);"><img class="pokeBoton" src="images/031.png"/></a>
 		<section class="pokeInforme">
-			<figure id="div_image">
-			</figure>
-			<article id="div_datos">
-		</article>
+			<div class="pokeContenedor">
+				<figure id="div_image" class="pokeInforme-imagen"></figure>
+				<article id="div_datos" class="pokeInforme-datos"></article>
+			</div>
 		</section>
 		<footer>
 			<p>Work performed by Terry Victor</p>
 		</footer>
+		<script languaje="javascript" src="js/pokecodigo.js"></script>
 	</body>
 
 </html>
